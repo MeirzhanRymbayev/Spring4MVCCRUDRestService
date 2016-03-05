@@ -1,5 +1,7 @@
 package com.websystique.springmvc.controller;
 
+import com.websystique.springmvc.model.User;
+import com.websystique.springmvc.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -8,16 +10,16 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
-/**
- * Created by Meirzhan_Rymbayev on 3/4/2016.
- */
+import java.util.List;
+
+
 @RestController
 public class HelloWorldRestController {
 
     @Autowired
     UserService userService; // Service which will do all data retrieval/manipulation work
 
-    //--------------------------Retrive All Users ----------------------------------------------------
+    //--------------------------Retrieve All Users ----------------------------------------------------
     @RequestMapping(value = "/user/", method = RequestMethod.GET)
     public ResponseEntity<List<User>> listAllUsers() {
         List<User> users = userService.findAllUsers();
@@ -37,7 +39,7 @@ public class HelloWorldRestController {
             System.out.println("User with id " + id + " not found");
             return new ResponseEntity<User>(HttpStatus.NOT_FOUND);
         }
-        return new ResponseEntity<User>(user, HttpStatus.NOT_FOUND);
+        return new ResponseEntity<User>(user, HttpStatus.OK);
     }
 
 
@@ -48,7 +50,7 @@ public class HelloWorldRestController {
         System.out.println("Creating User " + user.getName());
         if (userService.isUserExist(user)) {
             System.out.println("A user with name " + user.getName() + " already exist");
-            return new ResponseEntity<Void>(headers, HttpStatus.CREATED);
+            return new ResponseEntity<Void>(HttpStatus.CONFLICT);
         }
         userService.saveUser(user);
 
@@ -69,7 +71,7 @@ public class HelloWorldRestController {
 
         currentUser.setName(user.getName());
         currentUser.setAge(user.getAge());
-        currentUser.setSalary(user.getSalary);
+        currentUser.setSalary(user.getSalary());
 
         userService.updateUser(currentUser);
         return new ResponseEntity<User>(currentUser, HttpStatus.OK);
