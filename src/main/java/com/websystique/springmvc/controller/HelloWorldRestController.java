@@ -24,7 +24,7 @@ public class HelloWorldRestController {
     public ResponseEntity<List<User>> listAllUsers() {
         List<User> users = userService.findAllUsers();
         if (users.isEmpty()) {
-            return new ResponseEntity<List<User>>(HttpStatus.NO_CONTENT); //You may decide to return HTTP_STATOS.Not found
+            return new ResponseEntity<List<User>>(HttpStatus.NO_CONTENT); //You may decide to return HTTP_STATUS.Not found
         }
 
         return new ResponseEntity<List<User>>(users, HttpStatus.OK);

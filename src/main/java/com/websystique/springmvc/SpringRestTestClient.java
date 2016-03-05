@@ -72,13 +72,13 @@ public class SpringRestTestClient {
     public static void main(String args[]) {
         listAllUsers();
         getUser();
-//        createUser();
+        createUser();
         listAllUsers();
-//        updateUser();
-//        listAllUsers();
-//        deleteUser();
-//        listAllUsers();
-//        deleteAllUsers();
-//        listAllUsers();
+        updateUser();
+        listAllUsers();
+        deleteUser();
+        listAllUsers();
+        deleteAllUsers();
+        listAllUsers();
     }
 }
