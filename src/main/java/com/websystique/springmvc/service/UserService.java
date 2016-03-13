@@ -5,6 +5,7 @@ import com.websystique.springmvc.model.User;
 import java.util.List;
 
 public interface UserService {
+
     User findById(long id);
 
     User findByName(String name);
@@ -19,5 +20,6 @@ public interface UserService {
 
     void deleteAllUsers();
 
-    public boolean isUserExist(User user);
+    boolean isUserExist(User user);
+
 }
