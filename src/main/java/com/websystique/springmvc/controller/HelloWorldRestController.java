@@ -8,9 +8,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
-/**
- * Created by Meirzhan_Rymbayev on 3/4/2016.
- */
 @RestController
 public class HelloWorldRestController {
 
