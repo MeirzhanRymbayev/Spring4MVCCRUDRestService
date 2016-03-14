@@ -37,29 +37,29 @@ public class SpringRestTestClient {
     }
 
     /* POST */
-    private static void createUser() {
-        System.out.println("Testing create User API----------");
-        RestTemplate restTemplate = new RestTemplate();
-        User user = new User(0, "Sarah", 51, 134);
-        URI uri = restTemplate.postForLocation(REST_SERVICE_URI + "/user/", user, User.class);
-        System.out.println("Location : " + uri.toASCIIString());
-    }
+//    private static void createUser() {
+//        System.out.println("Testing create User API----------");
+//        RestTemplate restTemplate = new RestTemplate();
+//        User user = new User(0, "Sarah", 51, 134);
+//        URI uri = restTemplate.postForLocation(REST_SERVICE_URI + "/user/", user, User.class);
+//        System.out.println("Location : " + uri.toASCIIString());
+//    }
 
     /* PUT */
-    private static void updateUser() {
-        System.out.println("Testing update User API----------");
-        RestTemplate restTemplate = new RestTemplate();
-        User user = new User(1, "Tomy", 33, 70000);
-        restTemplate.put(REST_SERVICE_URI + "/user/1", user);
-        System.out.println(user);
-    }
+//    private static void updateUser() {
+//        System.out.println("Testing update User API----------");
+//        RestTemplate restTemplate = new RestTemplate();
+//        User user = new User(1, "Tomy", 33, 70000);
+//        restTemplate.put(REST_SERVICE_URI + "/user/1", user);
+//        System.out.println(user);
+//    }
 
     /* DELETE */
-    private static void deleteUser() {
-        System.out.println("Testing delete User API----------");
-        RestTemplate restTemplate = new RestTemplate();
-        restTemplate.delete(REST_SERVICE_URI + "/user/3");
-    }
+//    private static void deleteUser() {
+//        System.out.println("Testing delete User API----------");
+//        RestTemplate restTemplate = new RestTemplate();
+//        restTemplate.delete(REST_SERVICE_URI + "/user/3");
+//    }
 
 
     /* DELETE */
@@ -69,16 +69,16 @@ public class SpringRestTestClient {
         restTemplate.delete(REST_SERVICE_URI + "/user/");
     }
 
-    public static void main(String args[]) {
-        listAllUsers();
-        getUser();
-        createUser();
-        listAllUsers();
-        updateUser();
-        listAllUsers();
-        deleteUser();
-        listAllUsers();
-        deleteAllUsers();
-        listAllUsers();
-    }
-}*/
+//    public static void main(String args[]) {
+//        listAllUsers();
+//        getUser();
+//        createUser();
+//        listAllUsers();
+//        updateUser();
+//        listAllUsers();
+//        deleteUser();
+//        listAllUsers();
+//        deleteAllUsers();
+//        listAllUsers();
+//    }
+}
