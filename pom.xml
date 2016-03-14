@@ -4,13 +4,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.websystique.springmvc</groupId>
-    <artifactId>Spring4MVCCRUDRestService</artifactId>
+    <artifactId>SpringMVC4RestAPI</artifactId>
     <packaging>war</packaging>
     <version>1.0.0</version>
     <name>Spring4MVCCRUDRestService Maven Webapp</name>
     <properties>
         <springframework.version>4.2.0.RELEASE</springframework.version>
         <jackson.version>2.5.3</jackson.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
     <dependencies>
@@ -45,7 +47,7 @@
                     <version>2.4</version>
                     <configuration>
                         <warSourceDirectory>src/main/webapp</warSourceDirectory>
-                        <warName>String4MVCCRUDRestService</warName>
+                        <warName>SpringMVC4RestAPI</warName>
                         <failOnMissingWebXml>false</failOnMissingWebXml>
                     </configuration>
                 </plugin>

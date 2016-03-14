@@ -1,25 +1,24 @@
 package com.websystique.springmvc.model;
 
-
 public class User {
 
     private long id;
 
-    private String name;
+    private String username;
 
-    private int age;
+    private String address;
 
-    private double salary;
+    private String email;
 
-    public User() {
-        id = 0;
+    public User(){
+        id=0;
     }
 
-    public User(long id, String name, int age, double salary) {
+    public User(long id, String username, String address, String email){
         this.id = id;
-        this.name = name;
-        this.age = age;
-        this.salary = salary;
+        this.username = username;
+        this.address = address;
+        this.email = email;
     }
 
     public long getId() {
@@ -30,28 +29,28 @@ public class User {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public int getAge() {
-        return age;
+    public String getAddress() {
+        return address;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
-    public double getSalary() {
-        return salary;
+    public String getEmail() {
+        return email;
     }
 
-    public void setSalary(double salary) {
-        this.salary = salary;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     @Override
@@ -68,7 +67,7 @@ public class User {
             return true;
         if (obj == null)
             return false;
-        if (getClass() != obj.getClass())
+        if (!(obj instanceof User))
             return false;
         User other = (User) obj;
         if (id != other.id)
@@ -78,10 +77,10 @@ public class User {
 
     @Override
     public String toString() {
-        return "User [id=" + id + ", name=" + name + ", age=" + age
-                + ", salary=" + salary + "]";
+        return "User [id=" + id + ", username=" + username + ", address=" + address
+                + ", email=" + email + "]";
     }
 
 
-}
 
+}

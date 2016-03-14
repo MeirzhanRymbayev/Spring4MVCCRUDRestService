@@ -1,13 +1,14 @@
 package com.websystique.springmvc.configuration;
-import javax.servlet.Filter;
 
+import com.websystique.springmvc.filter.CORSFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-public class HelloWorldInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+import javax.servlet.Filter;
 
+public class HelloWorldInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[] { HelloWorldConfiguration.class };
+        return new Class[]{HelloWorldConfiguration.class};
     }
 
     @Override
@@ -17,7 +18,7 @@ public class HelloWorldInitializer extends AbstractAnnotationConfigDispatcherSer
 
     @Override
     protected String[] getServletMappings() {
-        return new String[] { "/" };
+        return new String[]{"/"};
     }
 
     @Override
@@ -25,5 +26,4 @@ public class HelloWorldInitializer extends AbstractAnnotationConfigDispatcherSer
         Filter [] singleton = { new CORSFilter()};
         return singleton;
     }
-
 }

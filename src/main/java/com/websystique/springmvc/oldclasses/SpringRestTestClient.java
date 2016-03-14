@@ -1,4 +1,4 @@
-package com.websystique.springmvc;
+package com.websystique.springmvc.oldclasses;
 
 import com.websystique.springmvc.model.User;
 import org.springframework.web.client.RestTemplate;
@@ -81,4 +81,4 @@ public class SpringRestTestClient {
         deleteAllUsers();
         listAllUsers();
     }
-}
+}*/
