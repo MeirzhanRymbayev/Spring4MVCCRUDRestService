@@ -1,6 +1,6 @@
 'use strict';
 
-App.controller('AppController', ['$scope', 'UserService', function($scope, UserService) {
+App.controller('UserController', ['$scope', 'UserService', function($scope, UserService) {
     var self = this;
     self.user={id:null,username:'',address:'',email:''};
     self.users=[];
@@ -53,7 +53,7 @@ App.controller('AppController', ['$scope', 'UserService', function($scope, UserS
         if(self.user.id===null){
             console.log('Saving New User', self.user);
             self.createUser(self.user);
-        }else{
+        } else {
             self.updateUser(self.user, self.user.id);
             console.log('User updated with id ', self.user.id);
         }
@@ -72,7 +72,7 @@ App.controller('AppController', ['$scope', 'UserService', function($scope, UserS
 
     self.remove = function(id){
         console.log('id to be deleted', id);
-        if(self.user.id === id) {//clean the form if the user to be deleted is shown there.
+        if(self.user.id === id) {   //clean the form if the user to be deleted is shown there.
             self.reset();
         }
         self.deleteUser(id);

@@ -1,6 +1,5 @@
 package com.websystique.springmvc.configuration;
 
-import com.websystique.springmvc.filter.CORSFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 import javax.servlet.Filter;
