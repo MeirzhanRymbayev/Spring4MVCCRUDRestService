@@ -18,7 +18,7 @@ public class UserServiceImpl implements UserService{
     private static List<User> users;
 
     static{
-        users= populateDummyUsers();
+        users = populateDummyUsers();
     }
 
     public List<User> findAllUsers() {
@@ -72,7 +72,7 @@ public class UserServiceImpl implements UserService{
     }
 
     private static List<User> populateDummyUsers(){
-        List<User> users = new ArrayList<User>();
+        List<User> users = new ArrayList<>();
         users.add(new User(counter.incrementAndGet(),"Sam", "NY", "sam@abc.com"));
         users.add(new User(counter.incrementAndGet(),"Tomy", "ALBAMA", "tomy@abc.com"));
         users.add(new User(counter.incrementAndGet(),"Kelly", "NEBRASKA", "kelly@abc.com"));
